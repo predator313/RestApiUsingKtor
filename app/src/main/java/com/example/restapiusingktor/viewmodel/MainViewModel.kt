@@ -24,7 +24,7 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _state.value=state.value.copy(isLoading = true)
-                _state.value=state.value.copy(rabbit = api.getRandomRabbit(), isLoading = true)
+                _state.value=state.value.copy(rabbit = api.getRandomRabbit(), isLoading = false)
 
             }catch (e:Exception){
                 Log.e("network",e.message.toString())

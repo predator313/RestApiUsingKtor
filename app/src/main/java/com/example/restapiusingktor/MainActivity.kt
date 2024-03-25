@@ -58,7 +58,7 @@ class MainActivity : ComponentActivity() {
                         Text(text = it.description, fontWeight = FontWeight.Normal, fontSize = 15.sp)
                         Spacer(modifier = Modifier.height(8.dp))
                     }
-                    Button(onClick =  viewModel::getRandomRabbit ,
+                    Button(onClick = { viewModel.getRandomRabbit() },
                         modifier = Modifier.align(Alignment.End)
                         ) {
                         Text(text = "Next Rabbit")
